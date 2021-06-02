@@ -14,16 +14,16 @@ import org.springframework.web.client.RestTemplate;
 public class TemperatureResource {
 
     @Value("${sensor.ipaddress}")
-    private String apiKey;
+    private String ip;
 
     @Autowired
     private RestTemplate restTemplate;
 
     @RequestMapping("/{sensorId}")
-    public Temperature getMovieInfo(@PathVariable("sensorId") String sensorId) {
+    public Temperature getSensorData(@PathVariable("sensorId") String sensorId) {
         System.out.println("Url is:");
-        System.out.println("http://" + apiKey + "/getTemperatures");
-        TemperatureSummary temperatureSummary = restTemplate.getForObject("http://" + apiKey + "/getTemperatures", TemperatureSummary.class);
+        System.out.println("http://" + ip + "/getTemperatures");
+        TemperatureSummary temperatureSummary = restTemplate.getForObject("http://" + ip + "/getTemperatures", TemperatureSummary.class);
         return new Temperature(sensorId, temperatureSummary.getAmbientTemperature(), temperatureSummary.getObjectTemperature());
 
     }
