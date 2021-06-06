@@ -5,6 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
@@ -12,14 +13,30 @@
 	<artifactId>movie-catalog-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>movie-catalog-service</name>
+=======
+		<version>2.4.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>handling-form-submission</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>handling-form-submission</name>
+>>>>>>> temperature-show-service
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+<<<<<<< HEAD
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+=======
+>>>>>>> temperature-show-service
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
